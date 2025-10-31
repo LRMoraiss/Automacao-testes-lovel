@@ -1,0 +1,42 @@
+{
+  "name": "qa-cyber-integration-lovel",
+  "version": "2.0.0",
+  "description": "Projeto integrado de QA e Cyber Security para plataforma Lovel",
+  "main": "index.js",
+  "scripts": {
+    "test:qa": "cypress run --spec 'qa-tests/cypress/e2e/**/*.cy.js'",
+    "test:qa:open": "cypress open",
+    "scan:security": "python cyber-scanner/scanner.py https://app.lovel.dev/jobs",
+    "test:integrated": "npm run test:qa && npm run scan:security",
+    "setup": "npm install && pip install -r requirements.txt",
+    "lint": "eslint qa-tests/**/*.js",
+    "demo": "node scripts/demo-integration.js",
+    "deploy": "python scripts/git-deploy.py",
+    "report": "node scripts/generate-report.js"
+  },
+  "keywords": [
+    "qa",
+    "testing",
+    "cypress",
+    "security",
+    "automation",
+    "e2e"
+  ],
+  "author": "Luciano Rodrigues de Morais",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "eslint": "^8.55.0"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LRMoraiss/QA-Cyber-Integration-Lovel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LRMoraiss/QA-Cyber-Integration-Lovel/issues"
+  },
+  "homepage": "https://github.com/LRMoraiss/QA-Cyber-Integration-Lovel#readme"
+}

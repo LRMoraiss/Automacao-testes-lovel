@@ -1,0 +1,23 @@
+# QA-Cyber-Integration-Lovel - Python Dependencies
+# Autor: Luciano Rodrigues de Morais
+
+# Core dependencies
+requests==2.31.0
+urllib3==2.1.0
+
+# Security scanning
+certifi==2023.11.17
+charset-normalizer==3.3.2
+idna==3.6
+
+# Development and testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Reporting
+jinja2==3.1.2
+markupsafe==2.1.3
+
+# Optional: Advanced security features
+cryptography==41.0.8
+pyopenssl==23.3.0
